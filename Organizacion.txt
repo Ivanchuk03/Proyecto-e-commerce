@@ -1,0 +1,14 @@
+Información: 
+  -La consigna: No hay, lo hacemos nosotros hay que usar lo que vimos      hasta ahora.
+  -Fecha de entrega: No se sabe. Puede ser en 2 o 3 semanas.	
+  -
+Organización:
+
+ Mas info:
+  -Definición de e-commerce: El comercio electrónico ​—también conocido      como e-commerce​, comercio por Internet o comercio en línea— consiste en    la compra y venta de productos o de servicios a través de internet,      tales como redes sociales y otras páginas web.
+  -Tema: Tecnologia (teclados, monitores, auriculares).
+  -Web modelo: https://compragamer.com/index.php
+  -Repositorio: https://github.com/Ivanchuk03/Proyecto-e-commerce.git
+
+  -1er paso: Buscar como hacer un e-commerce.
+    https://rockcontent.com/es/blog/como-hacer-un-ecommerce/
