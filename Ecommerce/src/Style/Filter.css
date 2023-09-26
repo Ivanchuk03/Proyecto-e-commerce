@@ -1,0 +1,15 @@
+.filters{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px 0px;
+    
+}
+.category{
+    display: flex;
+    gap: 1rem;
+}
+.ordenarPorPrecio{
+    display: flex;
+    gap: 1rem;
+}

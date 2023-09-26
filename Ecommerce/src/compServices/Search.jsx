@@ -1,12 +1,14 @@
-function SearchBar(params) {
+import '../Style/Search.css'
+
+
+function SearchBar({onChangeSearchProduct}) {
 
 
     return(
-        <form action="">
+        <form>
             <label htmlFor=""></label>
-            <input type="search" name="search" id="search" placeholder="Computadoras, Memorias ram, Discos..."/>
-            <input type="submit" value="Buscar"/>
-
+            <input onChange={onChangeSearchProduct} type="search" name="search" id="search" placeholder="Computadoras, Memorias ram, Discos..." className='Buscador' autoComplete='off'/>
+            <input type="submit" value="Buscar"  className='btnSubmit'/>
         </form>
     )
 }

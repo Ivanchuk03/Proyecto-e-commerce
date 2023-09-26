@@ -1,22 +1,30 @@
 import SearchBar from '../compServices/Search'
 import '../Style/Header.css'
+import LogoTecno from '../assets/img/zyro-image.png'
 
 
-const Header = () => {
+
+function Header ({onChangeProduct}) {
 
 
     return(
-        <header>
-            <div>
-                <img src="../assets/LogoHome-removebg-preview.png" alt="Tecno Compra" />
-            </div>
-            <div>
-                <SearchBar/>
-            </div>
-            <div>
+    
+            <div className='headerContainer'>
+                <div className='logo'>
+                    <img src={LogoTecno} alt="Tecno Compra" />
+                </div>
+                    
+                
+                <div className='searchT'>
+                    <SearchBar onChangeSearchProduct={onChangeProduct}/>
+                </div>
+                <div>
+                    <button className='startSesion' >Iniciar secion</button>
+                </div>
                 
             </div>
-        </header>
+            
+        
     )
 }
 

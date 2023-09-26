@@ -1,35 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect, useState } from 'react'
+import Footer from "../src/components/footer"
+import Header from './components/header'
 import './App.css'
+import Navbar from './components/navbar'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [product, setProducts] = useState([])
+  const [searchProduct, setSearchProducts] = useState("")
+  
+  const url = 'https://api.npoint.io/80b11121a2406aef6490'
+  
+  const handleChangeProducts = (product) => {
+    setSearchProducts(product.target.value)
+  }
+  
+  useEffect(() => {
+    fetch(url)
+        .then((res)=> (res.json()))
+        .then((res)=> setProducts(res.products));
+  },[]);
+  console.log(searchProduct)
+  console.log(product)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <header>
+          <Header onChangeProduct={handleChangeProducts}/>
+        </header>
+        <Navbar products={product} key={product.id} searchProducts={searchProduct}/>
+        <footer>
+              <Footer/>
+        </footer>
     </>
+      
+    
+      
+          
+      
+      
+    
+    
   )
 }
 
 export default App
+
+
+

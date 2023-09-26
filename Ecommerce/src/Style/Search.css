@@ -1,0 +1,12 @@
+.Buscador{
+    width: 500px;
+    height: 3rem;
+    border-radius: 10px;
+    border-color: #0979b0;
+    padding: 1rem;
+}
+.btnSubmit{
+    height: 3rem;
+    visibility: hidden;
+}
+
