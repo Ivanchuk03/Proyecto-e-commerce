@@ -19,8 +19,7 @@ function App() {
         .then((res)=> (res.json()))
         .then((res)=> setProducts(res.products));
   },[]);
-  console.log(searchProduct)
-  console.log(product)
+  
 
   return (
     <>
@@ -32,10 +31,8 @@ function App() {
               <Footer/>
         </footer>
     </>
-      
     
-      
-          
+  
       
       
     

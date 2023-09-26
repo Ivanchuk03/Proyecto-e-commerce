@@ -9,8 +9,9 @@ p{
     background-color: #eee;
     font-family: Montserrat;
     font-size: 25px;
-    margin: 3rem 0 6rem 0;
+    margin: 0 0 5rem 0;
 }
+
 .carousel-text{
     float: left;
     position: absolute;
