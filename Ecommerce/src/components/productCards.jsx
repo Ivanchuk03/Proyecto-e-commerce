@@ -1,6 +1,6 @@
 import "../Style/Products.css"
 import Filters from "./filters"
-import Destacados from "../assets/img/subcategoria_default.jpg"
+import Destacados from "../assets/img/destacados.jpg"
 
 function Products ({products, searchProducts}){
     return (

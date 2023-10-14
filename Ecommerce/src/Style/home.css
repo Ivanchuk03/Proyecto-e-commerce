@@ -1,69 +1,184 @@
+.home_container{
+  margin: 0 2rem 2rem 2rem;
+}
+
+
+/*------------------------Primer Carrusel--------------------------*/
+
 body{
     background-color: #eee;
 }
-p{
-    font-size: 25px;
-}
-/*Carousel*/
-.carousel_div{
-    background-color: #eee;
-    font-family: Montserrat;
-    font-size: 25px;
-    margin: 0 0 5rem 0;
-}
 
-.carousel-text{
-    float: left;
-    position: absolute;
-    left: 10rem;
-    bottom: 3rem;
-    color: white;
-    font-size: 50px;
-    font-family: Montserrat;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-align: left;
-}
-.carousel-indicators li{
-    border: 1px solid #0CB7F2;
-    border-radius: 50%;
-    cursor: pointer;
-    width: 16px;
-    height: 16px;
-    margin: 1rem;
+#app {
+    height: 100%;
+  }
+  html,
+  body {
     position: relative;
-    top: 1rem;
-}
-.novedades{
-    font-size: 3rem;
-    margin-bottom: 3rem;
-}
-/*Lista*/
-.contenedor_item{
+    height: 100%;
+  }
+  
+  body {
+    background: #eee;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .swiper {
+
+    width: 100%;
+    height: 100% 
+ 
+  }
+  
+
+
+ /* Al swiper-slide le metí background-color: #eee para que no se 
+  vean espacios en blanco. */
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #eee;
+  
+    /* Center slide text vertically */
     display: flex;
     justify-content: center;
-    margin-bottom: 5rem;
-}
-.item{
-display: flex;
-justify-content: center;
-column-gap: 6rem;
-}
-.container{
-border: 1px solid;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-between;
-row-gap: 2rem;
-background-color: white;
-padding: 0;
-width: 450px;
+    align-items: center;
+  }
+
+  /*Este es la imagen del carrusel. No podía hacer que los bullets
+  bajaran, así que, decidí subir la imagen con margin-button: 2rem
+  para hacer el efecto de que los bullets están abajo
+  */
+
+
+
+
+  .swiper-slide img {
+    display: block;
+   
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 2rem;
+   
+  }    
+
+  .img_carrusel1{
+    border: 1px solid;
+  }
+
+
+  .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+    /*No sabía como borrar los números. Usé esta propiedad para 
+    esconderlos:*/
+    content-visibility: hidden;
+   
+  }
+  
+  /*No le podia cambiar el width y height a los bullets usando 
+  .swiper-pagination-bullet, así que usé el inspector de código 
+  y encontre que podia usar .swiper-pagination-bullet-size*/
+
+  .swiper-pagination-bullet-size{
+    width: 1rem;
+  }
+
+
+    .swiper-pagination-bullet-active {
+    color: #fff;
+    background: #007aff;    
+  
+  }
+
+
+  
+/*-----------------------------------------------Segundo carrusel----------------------------------------------*/
+
+
+/*Me falta estudiar el tema de la api fetch y UseState para traer las imagenes que necesito 
+ de la api y mostrarlas en el segundo carrusel.*/
+
+.novedades{
+  font-family: "Montserrat";
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 0 1rem 1rem 1rem;
 } 
-.silla{
-width: 300px;
+
+.swiper-button-prev{
+  opacity: 1;
+  width: 40px;
+  height: 40px;
+  color: white;
+  background-color: rgb(8, 218, 250);
+  border-radius: 50%;
+  position: absolute;
+  top: 7rem;
+  left: 1rem;
 }
-.price{
-color: #0979B0;
-font-size: 2rem;
+
+.swiper-button-next{
+  opacity: 1;
+  width: 40px;
+  height: 40px;
+  color: white;
+  background-color: rgb(8, 218, 250);
+  border-radius: 50%;
+  position: absolute;
+  top: 7rem;
+  right: 1.2rem;
+}
+
+/*Para cambiar el tamaño de las flechitas*/
+
+:root {
+  --swiper-navigation-size: 16px;
+}
+
+.segundoCarrusel{
+  margin-top: 5rem;
+}
+
+.tarjetas_container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  height: 300px;
+  border: 1px solid;
+}
+
+.tarjeta{
+  width: 240px;
+  height: 240px;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+
+.tarjeta img{
+  width: 105.33px;
+  height: 94.33px;
+  margin: 0;
+}
+  
+.tarjeta_price{
+  text-align: center;
+  color: #0cb7f2;
+
 }

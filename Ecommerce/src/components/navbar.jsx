@@ -19,7 +19,7 @@ return (
         </NavLink>
         </nav>
     <Routes>
-        <Route path="/" element = { <Home product={products}/>}/>
+        <Route path="/" element = { <Home/>}/>
         <Route path="/Productos" element = {<Products products={products} searchProducts={searchProducts} key={key}/>}/>
         
         <Route path="*" element= {<NoMatch/>}/>
