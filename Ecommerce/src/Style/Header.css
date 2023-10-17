@@ -12,6 +12,7 @@ button{
     flex-basis: 100%;
     justify-content: space-around;
     align-items: center;
+    background-color: white;
 }
 .logo{
     width: 200px;

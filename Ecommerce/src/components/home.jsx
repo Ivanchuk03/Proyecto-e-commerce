@@ -17,46 +17,31 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import sillas from "../assets/img/sillas.jpg"
 import auricular from "../assets/img/auricular.jpg"
 
-const url = 'https://api.npoint.io/80b11121a2406aef6490';
-let monitores = []; 
-let celulares = [];
+
+
 
 
 export default function App(){
+  const [productos, setProductos ] = useState([]);
 
-   /* Esto forma parte del segundo carrusel */
-    
-   const [productos, setProductos ] = useState([]);
-
-
-   useEffect( () => {
-
-       fetch(url)
-        .then(res => res.json())
-        .then(data => setProductos(data.products))
+  const url = 'https://api.npoint.io/80b11121a2406aef6490';
 
 
-   } , []);
- 
-   for(let i=0; i<4; i++){        
-       monitores[i] = productos[i];
-   }
-   for(let i=11; i<14; i++){
-         let j=0;
-         celulares[j] = productos[i];
-         j++;
-   }
+  useEffect( () => {
+
+      fetch(url)
+       .then(res => res.json())
+       .then(data => setProductos(data.products))
+
+
+  } , []);
+
+  //slcue es una propiedad para pasar los elementos de un arreglo a otro.
   
-
-  /* const Monitores = productos.filter ( product => product.category === "Monitores");
-   const Notebooks = productos.filter ( product => product.category === "Notebooks");
+   let notebooks = productos.slice(12,16); // Los elementos 12 al 16 del arreglo productos pasan al arreglo notebooks
+   let monitores = productos.slice(0,4); // Los elementos 0 al 4 del arreglo productos pasan al arreglo notebooks
   
-     
-
   
-   */
-
-
 
 
 
@@ -104,27 +89,27 @@ export default function App(){
         >
 
         <SwiperSlide>
-          <div className='tarjetas_container'>
+        <div className='tarjetas_container'>
+           {notebooks.map ( (p) => ( 
+                <div className='tarjeta'>
+                   <img src={p.image} alt={p.tittle} />
+                   <div className='tarjeta_title'>{p.tittle}</div>
+                   <div className='tarjeta_price'> $ {p.price}</div>
+                </div> 
+           ) )};                  
+        </div>
+        </SwiperSlide>  
+        <SwiperSlide>
+         <div className='tarjetas_container'>
            {monitores.map ( (p) => ( 
                 <div className='tarjeta'>
                    <img src={p.image} alt={p.tittle} />
                    <div className='tarjeta_title'>{p.tittle}</div>
                    <div className='tarjeta_price'> $ {p.price}</div>
-                </div>
-             
+                </div> 
            ) )};                  
           </div>
-        </SwiperSlide>  
-        <SwiperSlide>
-          <div className='tarjetas_container'>
-            {celulares.map ( (p) => ( 
-                <div className='tarjeta'>
-                   <img src={p.image} alt={p.tittle} />
-                   <div className='tarjeta_title'>{p.tittle}</div>
-                   <div className='tarjeta_price'> $ {p.price}</div>
-                </div>
-            ) )};          
-          </div>
+        
         </SwiperSlide>
   
        

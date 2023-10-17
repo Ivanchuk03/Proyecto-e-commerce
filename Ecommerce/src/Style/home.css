@@ -1,13 +1,12 @@
 .home_container{
   margin: 0 2rem 2rem 2rem;
+  background-color: #eee;
 }
 
 
 /*------------------------Primer Carrusel--------------------------*/
 
-body{
-    background-color: #eee;
-}
+
 
 #app {
     height: 100%;
@@ -125,8 +124,8 @@ body{
   background-color: rgb(8, 218, 250);
   border-radius: 50%;
   position: absolute;
-  top: 7rem;
-  left: 1rem;
+  left: 3rem;
+  bottom: 1px;
 }
 
 .swiper-button-next{
@@ -137,8 +136,8 @@ body{
   background-color: rgb(8, 218, 250);
   border-radius: 50%;
   position: absolute;
-  top: 7rem;
-  right: 1.2rem;
+  right: 2.5rem;
+
 }
 
 /*Para cambiar el tamaño de las flechitas*/
@@ -153,17 +152,19 @@ body{
 
 .tarjetas_container{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  width: 90%;
+  column-gap: 3rem;
+  width: 85vw;
   height: 300px;
-  border: 1px solid;
+  margin-left: 3.5rem;
 }
 
 .tarjeta{
-  width: 240px;
+  width: 300px;
   height: 240px;
-  border: 1px solid;
+  padding: 0.5rem 5px 5px 0.5em;
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -176,9 +177,14 @@ body{
   height: 94.33px;
   margin: 0;
 }
-  
+
+.tarjeta_title{
+  font-size: 0.7rem;
+}
+
 .tarjeta_price{
   text-align: center;
-  color: #0cb7f2;
-
+  color: #0979b0; 
+  font-size: 1rem;
+  
 }

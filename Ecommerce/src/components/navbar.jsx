@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import "../Style/navbar.css";
 import Home from "./home";
 import Products from "./productCards";
+import LogoTecno from '../assets/img/zyro-image.png'
 
 import NoMatch from "./noMatch"
 function Navbar({products, searchProducts, key}) {

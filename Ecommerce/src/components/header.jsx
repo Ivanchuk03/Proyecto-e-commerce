@@ -1,3 +1,5 @@
+
+import Home from "./home.jsx";
 import SearchBar from '../compServices/Search'
 import '../Style/Header.css'
 import LogoTecno from '../assets/img/zyro-image.png'
@@ -5,14 +7,19 @@ import LogoTecno from '../assets/img/zyro-image.png'
 
 
 function Header ({onChangeProduct}) {
+ 
 
 
     return(
     
             <div className='headerContainer'>
-                <div className='logo'>
+         
+        
+                  <div className='logo'>
                     <img src={LogoTecno} alt="Tecno Compra" />
-                </div>
+                   </div> 
+            
+              
                     
                 
                 <div className='searchT'>
