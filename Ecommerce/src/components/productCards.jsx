@@ -1,10 +1,33 @@
 import "../Style/Products.css"
 import Filters from "./filters"
 import Destacados from "../assets/img/destacados.jpg"
+import Ayuda from "../components/Ayuda.jsx";
+import { FaArrowUp } from 'react-icons/fa';
+
+let scrollPosition;
+let variable;
 
 function Products ({products, searchProducts}){
+
+    function Flecha( {props} ) {
+        if(props.variable){
+            return <div className="boton_subir"><FaArrowUp></FaArrowUp></div>  ;
+        }
+    }
+    
+    window.addEventListener('scroll', function () {
+         scrollPosition = window.scrollY;
+        if (scrollPosition > 500){
+           variable = true;
+        }
+      })
+
+
+   
+
+
     return (
-        <main className="products">
+        <main  className="products">
             <div >
                 <img src={Destacados} alt="Destacados" />
                 <Filters/>
@@ -33,6 +56,14 @@ function Products ({products, searchProducts}){
                 </ul>
             
             </div>
+            <Flecha para = {variable} >
+
+            </Flecha>
+          
+             
+               
+    
+             
         </main>
             
     )
