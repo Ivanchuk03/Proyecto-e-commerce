@@ -47,17 +47,15 @@ se ubican como yo quiero*/
     display: flex;
     align-items: center;
     justify-content: center;
-
  
 }
 .Navbar_navlink{
-    font-family: Montserrat;
-    Font-size: 1rem;
+    font-family: "Montserrat";
+    font-size: 1rem;
     color: black;
     list-style: none;
     margin: 1rem;
     text-decoration-line: none;
-    font-size: 1rem;
     margin-right: 3rem;    
 }
 .Navbar_navlink:hover{
@@ -66,8 +64,8 @@ se ubican como yo quiero*/
     cursor: pointer;
 }
 .homeButton{
-    font-family: Montserrat;
-    Font-size: 1rem;
+    font-family: "Montserrat";
+    font-size: 1rem;
     color: black;
     list-style: none;
     margin: 1rem;

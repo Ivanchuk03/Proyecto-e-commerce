@@ -1,7 +1,7 @@
 import "../Style/Footer.css";
 
 /*Importo los iconos de las redes sociales:*/
-import { FaInstagram, FaYoutube, FaTiktok, FaLinkedin } from 'react-icons/Fa';
+import { FaInstagram, FaYoutube, FaTiktok, FaLinkedin } from 'react-icons/fa';
 
 
 

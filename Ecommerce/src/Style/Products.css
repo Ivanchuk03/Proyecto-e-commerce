@@ -55,18 +55,33 @@
     padding: 10px 0px;
 }
 
+/*------------------Este código es para hacer la flecha de volver arriba-------------------*/
 
-.boton_subir{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-   background-color: #0cb7f2; 
-   border: none;
-   width: 56px;
-   height: 56px;
-   border-radius: 50%;
-   position: absolute;
-   right: 3.5rem;
-   bottom: -25rem;
-  
+
+
+/*La flecha tiene esta clase para hacerla invisible.*/
+.invisible_arrow{
+  visibility         : hidden; 
 }
+
+/*Agrego esta clase para hacer que la flecha este visible.*/
+.visible_arrow{
+    visibility       : visible; /*Esa propiedad hace que la visibilidad de la flecha sea visible*/
+    background-color : aqua;
+    width            : 60px;
+    height           : 60px;
+    border-radius    : 50%;
+    cursor           : pointer;
+    padding-right    : 1px;
+    
+    display          : flex;
+    justify-content  : center;
+    align-items      : center;
+    
+    position         : fixed;
+    bottom           : 2rem;
+    right            : 5.5rem;
+   
+}
+
+/*--------------------------------------------------------------------------------------------------------------*/

@@ -10,9 +10,21 @@
     margin: 0.5rem 0 0 0;
     height: 125px;
 }
-.logo{
-    width: 200px;
+
+.logo_img{
+    width: 250px;
     height: 5rem;
+
+    /*
+    position: absolute;
+    top: 0px;
+    left: 16.7rem; 
+    */
+}
+.logo_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 /*Al div con clase searchT le doy un display flex para poder acomodar la lupa en el centro y luego llevarla 
