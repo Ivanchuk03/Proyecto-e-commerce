@@ -1,5 +1,7 @@
 import "../Style/Footer.css"
 
+/*Importo los iconos de las redes sociales:*/
+import { FaInstagram, FaYoutube, FaTiktok, FaLinkedin } from 'react-icons/fa';
 
 function Footer() {
 
@@ -13,20 +15,28 @@ function Footer() {
             </div>
             <div className="separadores"><p className="numeroInvicible">1</p></div>
             <div className="btn2">
-                <button><span className="textBtn">Trabaja con nosotros</span></button>
-                <button><span className="textBtn">Boton de arrepentimiento</span></button>
+                <button>Sobre nosotros</button>
+                <button>Boton de arrepentimiento</button>
             </div>
             <div className="separadores"><p className="numeroInvicible">1</p></div>
-            <div>
+            <div className="social_media">
                 <p>Siguenos en</p>
-                <div>
-
+                <div className="iconos_socialMedia">
+                    <div>
+                        <FaInstagram/>
+                    </div>
+                    <div>
+                        <FaYoutube/>
+                    </div>
+                    <div>
+                        <FaTiktok/>
+                    </div>
+                    <div>
+                        <FaLinkedin/>
+                    </div>
                 </div>
             </div>
         </div>
-            
-        
-        
     )
 }
 

@@ -1,20 +1,58 @@
 *{
     margin: 0px;
 }
+
+/*---------------- -Esto es el código que usé para posicionar el logo------------------------*/
+       
+/*homebutton es la clase que le dí al NavLink que tiene el logo. Le doy position relative
+y uso las propiedades bottom y left para ubicarlo en la parte izquierda del header.*/
+.homeButton{
+    position: relative;
+    bottom: 5rem;
+    left: 2.3rem;
+}
+
+
+.logo_img{
+    width: 250px;
+    height: 5rem;
+
+    /*
+    position: absolute;
+    top: 0px;
+    left: 16.7rem; 
+    */
+}
+.logo_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/*hay un div con la clase elemenetos_navbar que tiene los navlinks del navbar. Doy un margin-right
+para ubicarlos en el centro. No me sirve simplemente darle justify-content: center a Navbar_nav 
+porque también tiene en cuenta el logo y los 3 navlnks (ayuda, sobre nosotros y marcas sponsor) no 
+se ubican como yo quiero*/
+
+
+/*-------------------------------------------------------------------------------------------*/
+
+
 .Navbar_nav{
-    margin-top: 0px;
-    background-color: #0CB7F2;
+    background-color: #29aaeb;
+    height: 100px;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 .Navbar_navlink{
-    font-family: Montserrat;
-    Font-size: 1rem;
+    font-family: "Montserrat";
+    font-size: 1rem;
     color: black;
     list-style: none;
     margin: 1rem;
     text-decoration-line: none;
-    font-size: 1.5rem;
+    margin-right: 3rem;    
 }
 .Navbar_navlink:hover{
     color: white;
@@ -22,8 +60,8 @@
     cursor: pointer;
 }
 .homeButton{
-    font-family: Montserrat;
-    Font-size: 1rem;
+    font-family: "Montserrat";
+    font-size: 1rem;
     color: black;
     list-style: none;
     margin: 1rem;

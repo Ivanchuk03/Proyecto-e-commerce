@@ -1,32 +1,53 @@
-button{
-    border: none; 
-    padding: 14px 28px; 
-    cursor: pointer; 
-    border-radius: 5px;
-    
-}
-
 .headerContainer{
     display: flex;
-    flex-direction: row;
     flex-basis: 100%;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    column-gap: 1.7rem;
+    background-color: white;
+    margin: 0.5rem 0 0 0;
+    height: 125px;
 }
-.logo{
-    width: 200px;
+
+.logo_img{
+    width: 250px;
     height: 5rem;
+
+    /*
+    position: absolute;
+    top: 0px;
+    left: 16.7rem; 
+    */
 }
-.logo img{
+.logo_img img{
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
+
+/*Al div con clase searchT le doy un display flex para poder acomodar la lupa en el centro y luego llevarla 
+a la posicion que quiero*/
+
+.searchT{
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
 .startSesion{
-    background-color: #0cb7f2;
+    background-color: #29aaeb;
+    width: 173.96px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.startSesion button{
+    font-size: 14px;
+    background-color: #29aaeb;
     color: white;
-    font-size: 16px;
-    padding: 10px 28px;
+    border: none;
 }
 
 

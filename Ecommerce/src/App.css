@@ -1,18 +1,8 @@
 @font-face {
-  font-family: "Monserrat";
+  font-family: "Montserrat";
   src: url(./assets/font/Montserrat-VariableFont_wght.ttf);
 }
 
 *{
-  font-family: "Monserrat";
+  font-family: "Montserrat";
 }
-header{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: white;
-  
-}
-

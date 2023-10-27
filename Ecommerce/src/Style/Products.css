@@ -1,4 +1,3 @@
-
 .products{
     width: 100%;
     height: 100%;
@@ -53,3 +52,32 @@
     background: #fff;
     padding: 10px 0px;
 }
+
+/*------------------Este código es para hacer la flecha de volver arriba-------------------*/
+
+
+
+/*La flecha tiene esta clase para hacerla invisible.*/
+.invisible_arrow{
+visibility         : hidden; 
+}
+
+/*Agrego esta clase para hacer que la flecha este visible.*/
+.visible_arrow{
+    visibility       : visible; /*Esa propiedad hace que la visibilidad de la flecha sea visible*/
+    background-color : aqua;
+    width            : 60px;
+    height           : 60px;
+    border-radius    : 50%;
+    cursor           : pointer;
+    padding-right    : 1px;
+    
+    display          : flex;
+    justify-content  : center;
+    align-items      : center;
+    
+    position         : fixed;
+    bottom           : 2rem;
+    right            : 5.5rem;
+}
+/*--------------------------------------------------------------------------------------------------------------*/

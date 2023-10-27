@@ -31,12 +31,6 @@ function App() {
               <Footer/>
         </footer>
     </>
-    
-  
-      
-      
-    
-    
   )
 }
 
