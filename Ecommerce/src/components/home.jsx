@@ -21,7 +21,7 @@ import auricular from "../assets/img/auricular.jpg"
 
 
 
-export default function App(){
+export default function Home(){
   const [productos, setProductos ] = useState([]);
 
   const url = 'https://api.npoint.io/80b11121a2406aef6490';

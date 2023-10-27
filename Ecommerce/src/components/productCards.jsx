@@ -26,6 +26,10 @@ function Products ({products, searchProducts}){
         });
     }
 
+    function borrar() {
+        
+    }
+
   //Para hacer que flecha aparezca y desaparezca a partir de un determinado punto.
     useEffect(() => {
         //Guardo la referencia del elemento div que contiene la flecha (línea 95) en la variable flecha

@@ -2,6 +2,7 @@
 import SearchBar from '../compServices/Search'
 import '../Style/Header.css'
 
+
 /*IMPORTANTE 🧐: El logo ya no está en este componente. Lo moví a navbar.jsx para poder hacer que se recargue home 
 cuando doy click en el logo. 
           
