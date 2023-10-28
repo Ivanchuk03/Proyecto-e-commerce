@@ -29,9 +29,9 @@ export default function Home(){
 
   useEffect( () => {
 
-      fetch(url)
-       .then(res => res.json())
-       .then(data => setProductos(data.products))
+    fetch(url)
+      .then(res => res.json())
+      .then(data   => setProductos(data.products))
 
 
   } , []);
@@ -47,12 +47,12 @@ export default function Home(){
 
   return (
     /* --------------Primer carrusel ------------------ */
-   <section className='home_container'>
-     <section className='primerCarrusel' >
+  <section className='home_container'>
+    <section className='primerCarrusel' >
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
-         autoplay={{
+        autoplay={{
           delay: 3000,
           disableOnInteraction: false,
         }}
@@ -64,11 +64,11 @@ export default function Home(){
         className="mySwiper"
       >
         <SwiperSlide >
-           <img className='img_carrusel1'  src={sillas} alt="sillas gamer"/>
-         
+        <img className='img_carrusel1'  src={sillas} alt="sillas gamer"/>
+        
         </SwiperSlide>
         <SwiperSlide>
-           <img className='img_carrusel1'  src={auricular} alt="auricular gamer" />
+          <img className='img_carrusel1'  src={auricular} alt="auricular gamer" />
     
         </SwiperSlide>
       </Swiper>
@@ -78,48 +78,44 @@ export default function Home(){
 
 
     <section className='segundo carrusel'>
-         <p className='novedades'>
+        <p className='novedades'>
           Ultimas novedades. <br />
           <hr />
         </p>
         <Swiper
-           navigation={true}
-           modules={[Navigation]}
-           className="mySwiper"
+          navigation={true}
+          modules={[Navigation]}
+          className="mySwiper"
         >
-
         <SwiperSlide>
         <div className='tarjetas_container'>
-           {notebooks.map ( (p) => ( 
+          {notebooks.map ( (p) => ( 
                 <div className='tarjeta'>
-                   <img src={p.image} alt={p.tittle} />
-                   <div className='tarjeta_title'>{p.tittle}</div>
-                   <div className='tarjeta_price'> $ {p.price}</div>
+                  <img src={p.image} alt={p.tittle} />
+                  <div className='tarjeta_title'>{p.tittle}</div>
+                  <div className='tarjeta_price'> $ {p.price}</div>
                 </div> 
-           ) )};                  
+          ) )};                  
         </div>
         </SwiperSlide>  
         <SwiperSlide>
-         <div className='tarjetas_container'>
-           {monitores.map ( (p) => ( 
+        <div className='tarjetas_container'>
+          {monitores.map ( (p) => ( 
                 <div className='tarjeta'>
-                   <img src={p.image} alt={p.tittle} />
-                   <div className='tarjeta_title'>{p.tittle}</div>
-                   <div className='tarjeta_price'> $ {p.price}</div>
+                  <img src={p.image} alt={p.tittle} />
+                  <div className='tarjeta_title'>{p.tittle}</div>
+                  <div className='tarjeta_price'> $ {p.price}</div>
                 </div> 
-           ) )};                  
+          ) )};                  
           </div>
         
         </SwiperSlide>
-  
-       
       </Swiper>
 
     </section>
- </section> 
+  </section> 
 
 
-   )
-  
+  )
 }
 

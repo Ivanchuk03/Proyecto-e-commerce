@@ -3,7 +3,7 @@ import "../Style/marcasSponsor.css"
 function MarcasSponsor() {
     return (
       <>
-       <p>Tenemos muchas marcas sponsor</p>
+      <p>Tenemos muchas marcas sponsor</p>
       </>
     )
 }

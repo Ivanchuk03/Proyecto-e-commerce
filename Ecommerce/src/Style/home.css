@@ -28,12 +28,11 @@
 
     width: 100%;
     height: 100% 
- 
   }
   
 
 
- /* Al swiper-slide le metí background-color: #eee para que no se 
+/* Al swiper-slide le metí background-color: #eee para que no se 
   vean espacios en blanco. */
 
   .swiper-slide {
@@ -57,13 +56,10 @@
 
   .swiper-slide img {
     display: block;
-   
-    
     width: 100%;
     height: 100%;
     object-fit: cover;
     margin-bottom: 2rem;
-   
   }    
 
   .img_carrusel1{
@@ -83,7 +79,6 @@
     /*No sabía como borrar los números. Usé esta propiedad para 
     esconderlos:*/
     content-visibility: hidden;
-   
   }
   
   /*No le podia cambiar el width y height a los bullets usando 

@@ -28,7 +28,7 @@
 }
 
 /*Al div con clase searchT le doy un display flex para poder acomodar la lupa en el centro y luego llevarla 
- a la posicion que quiero*/
+a la posicion que quiero*/
 
 .searchT{
     display: flex;

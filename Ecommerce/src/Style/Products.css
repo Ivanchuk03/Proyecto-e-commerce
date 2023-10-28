@@ -61,7 +61,7 @@
 
 /*La flecha tiene esta clase para hacerla invisible.*/
 .invisible_arrow{
-  visibility         : hidden; 
+    visibility         : hidden; 
 }
 
 /*Agrego esta clase para hacer que la flecha este visible.*/
@@ -81,7 +81,6 @@
     position         : fixed;
     bottom           : 2rem;
     right            : 5.5rem;
-   
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/

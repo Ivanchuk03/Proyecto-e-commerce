@@ -3,7 +3,7 @@
 }
 
 /*---------------- -Esto es el código que usé para posicionar el logo------------------------*/
-       
+
 /*homebutton es la clase que le dí al NavLink que tiene el logo. Le doy position relative
 y uso las propiedades bottom y left para ubicarlo en la parte izquierda del header.*/
 .homeButton{
@@ -47,7 +47,6 @@ se ubican como yo quiero*/
     display: flex;
     align-items: center;
     justify-content: center;
- 
 }
 .Navbar_navlink{
     font-family: "Montserrat";
