@@ -37,28 +37,22 @@ function Products ({products, searchProducts}){
 
         window.addEventListener('scroll', function () {
            //Se guardan la cantidad de píxeles de  scroll vertical            
-           let scrollPosition = window.scrollY;
+        let scrollPosition = window.scrollY;
     
            //Cuando el usuario llegue o pase de los 300 píxeles, aparece la flecha.
            //Cuando el usuario no llega a los 300 píxeles, la flecha desaparece.
             if(scrollPosition >= 300){
-               arrow.classList.remove("invisible_arrow");
-               arrow.classList.add("visible_arrow");
-            }
+                arrow.classList.remove("invisible_arrow");
+                arrow.classList.add("visible_arrow");
+            }   
             if(scrollPosition < 300){
                 arrow.classList.remove("visible_arrow");
                 arrow.classList.add("invisible_arrow");
             }
-          })
-         
-     
-      
+        })
     }, []);
-   
 
-  /*--------------------------------------------------------------------------------------------------------------*/
-
-   
+/*--------------------------------------------------------------------------------------------------------------*/
 
 
     return (
@@ -96,19 +90,12 @@ function Products ({products, searchProducts}){
                 El atributo ref me sirve para referenciar al elemento.
             */}
             
-             <span ref={reference_arrow} onClick={goTop} className='invisible_arrow'> 
-               <FaArrowUp/> 
-             </span>  
-        
-               
-          
-               
-    
-             
+            <span ref={reference_arrow} onClick={goTop} className='invisible_arrow'> 
+            <FaArrowUp/> 
+            </span>  
         </main>
             
     )
-   
 }
 
 

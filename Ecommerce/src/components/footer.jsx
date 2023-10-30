@@ -27,13 +27,13 @@ function Footer() {
                 <p>Seguinos en</p>
                 <div className="iconos_socialMedia">
                     <div>
-                      <FaInstagram/>
+                        <FaInstagram/>
                     </div>
                     <div>
-                      <FaYoutube/>
+                        <FaYoutube/>
                     </div>
                     <div>
-                       <FaTiktok/> 
+                        <FaTiktok/> 
                     </div>
                     <div>
                         <FaLinkedin/>

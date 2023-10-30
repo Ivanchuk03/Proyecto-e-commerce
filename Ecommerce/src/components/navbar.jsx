@@ -23,22 +23,29 @@ return (
 <BrowserRouter>
         <nav className="Navbar_nav" aria-multiselectable="true" aria-orientation="horizontal">
         <NavLink to="/" role="button" className="homeButton">
-           <div className="logo_img">
-             <img src={LogoTecno} alt="TecnoCompra"/>
+        <div className="logo_img">
+            <img src={LogoTecno} alt="TecnoCompra"/>
             </div>  
         </NavLink>
+<<<<<<< HEAD
        <div className="elementos_navbar"> 
          <span id="Productos" ><NavLink className="Navbar_navlink" to="/Productos" role="button">
             Productos
          </NavLink> </span>  
          <NavLink className="Navbar_navlink" to="/Ayuda" role="button">
+=======
+        <div className="elementos_navbar"> 
+        <NavLink className="Navbar_navlink" to="/Productos" role="button">
+            Productos
+        </NavLink>
+        <NavLink className="Navbar_navlink" to="/Ayuda" role="button">
+>>>>>>> 75c90b391d508c1a07d50ed1d69e224ade3f6d52
             Ayuda
-         </NavLink>
-         <NavLink className="Navbar_navlink" to="/MarcasSponsor" role="button">
+        </NavLink>
+        <NavLink className="Navbar_navlink" to="/MarcasSponsor" role="button">
             Marcas Sponsor
-         </NavLink>
-         </div>
-       
+        </NavLink>
+        </div>
         
         </nav>
     <Routes>
@@ -54,5 +61,4 @@ return (
 export default Navbar;
 
 /*
-  
 */
