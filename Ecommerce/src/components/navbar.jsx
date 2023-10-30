@@ -11,7 +11,14 @@ import MarcasSponsor  from "./MarcasSponsor.jsx";
 
 import NoMatch from "./noMatch"
 
-function Navbar({products, searchProducts, key}) {
+function Navbar({products, searchProducts, key, id}) {
+   if({id}){
+      const Productos = document.getElementById("Productos");
+      Productos.click();
+   }
+
+
+
 return (
 <BrowserRouter>
         <nav className="Navbar_nav" aria-multiselectable="true" aria-orientation="horizontal">
@@ -21,9 +28,9 @@ return (
             </div>  
         </NavLink>
        <div className="elementos_navbar"> 
-         <NavLink className="Navbar_navlink" to="/Productos" role="button">
+         <span id="Productos" ><NavLink className="Navbar_navlink" to="/Productos" role="button">
             Productos
-         </NavLink>
+         </NavLink> </span>  
          <NavLink className="Navbar_navlink" to="/Ayuda" role="button">
             Ayuda
          </NavLink>
