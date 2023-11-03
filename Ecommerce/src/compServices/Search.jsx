@@ -40,7 +40,6 @@ function SearchBar({onChangeSearchProduct}) {
       const reset = document.getElementById("form")
       reset.reset();
        */
-<<<<<<< HEAD
        const input = document.getElementById("search");
        input.value="";
        icon.classList.remove("visible_icon");
@@ -48,14 +47,6 @@ function SearchBar({onChangeSearchProduct}) {
         input.focus();
       
    }
-=======
-      const input = document.getElementById("search");
-      input.value="";
-      icon.classList.remove("visible_icon");
-      icon.classList.add("invisible_icon");
-      input.focus();
-  }
->>>>>>> 75c90b391d508c1a07d50ed1d69e224ade3f6d52
 
 
    /* Está función es para deshabilitar la tecla enter. No queremos que el usuario haga enter porque 
@@ -72,24 +63,13 @@ function SearchBar({onChangeSearchProduct}) {
 
 
 
-  function irAProductos(){
-  
-   <Navbar id = {"true"}></Navbar>
-  }
-
 
     return(
-<<<<<<< HEAD
-       <> 
-        <form className='form_buscador'>
-         
-=======
       <> 
         <form id="form" className='form_buscador'>
->>>>>>> 75c90b391d508c1a07d50ed1d69e224ade3f6d52
           {/* Llamo a la función con el evento OnInput, el cuál se aplica cuando el usuario cambia el valor 
           del input.  */}
-            <input onClick={irAProductos}  onInput={showIcon} onChange={onChangeSearchProduct} type="search" name="search" id="search" 
+            <input onInput={showIcon} onChange={onChangeSearchProduct} type="search" name="search" id="search" 
               placeholder="Buscador" className='buscador' autoComplete='off'/>
             
         </form>

@@ -11,11 +11,11 @@ import MarcasSponsor  from "./MarcasSponsor.jsx";
 
 import NoMatch from "./noMatch"
 
-function Navbar({products, searchProducts, key, id}) {
-   if({id}){
+function Navbar({products, searchProducts, key,}) {
+  /*  if({id}){
       const Productos = document.getElementById("Productos");
       Productos.click();
-   }
+   } */
 
 
 
@@ -27,19 +27,11 @@ return (
             <img src={LogoTecno} alt="TecnoCompra"/>
             </div>  
         </NavLink>
-<<<<<<< HEAD
-       <div className="elementos_navbar"> 
-         <span id="Productos" ><NavLink className="Navbar_navlink" to="/Productos" role="button">
-            Productos
-         </NavLink> </span>  
-         <NavLink className="Navbar_navlink" to="/Ayuda" role="button">
-=======
         <div className="elementos_navbar"> 
         <NavLink className="Navbar_navlink" to="/Productos" role="button">
             Productos
         </NavLink>
         <NavLink className="Navbar_navlink" to="/Ayuda" role="button">
->>>>>>> 75c90b391d508c1a07d50ed1d69e224ade3f6d52
             Ayuda
         </NavLink>
         <NavLink className="Navbar_navlink" to="/MarcasSponsor" role="button">
