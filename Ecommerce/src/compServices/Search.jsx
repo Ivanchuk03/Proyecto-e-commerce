@@ -60,19 +60,52 @@ function SearchBar({onChangeSearchProduct}) {
     }
   });
 
+  /*Este código es para que la palabra buscador suba cuando el usuario hace focus en el form y que vuelva cuando ya no hace focus.
+  
+ 
+   */
 
+  const input = document.getElementById("search"); 
+  const label_container = document.getElementById("label_buscador");
+  const span = document.getElementById("texto_buscador");
+
+   function handleLabel() {
+    span.classList.add("top");
+    span.classList.add("focus");
+    label_container.classList.add("focus");
+    
+   }
+
+   function handleLabel2() {
+    input.value = input.value.trim( );
+    if (input.value.trim( ).length == 0 ){
+      span.classList.remove("top");
+    }
+    
+    span.classList.remove("focus");
+    label_container.classList.remove("focus");
+
+  }
 
 
 
     return(
       <> 
-        <form id="form" className='form_buscador'>
-          {/* Llamo a la función con el evento OnInput, el cuál se aplica cuando el usuario cambia el valor 
-          del input.  */}
-            <input onInput={showIcon} onChange={onChangeSearchProduct} type="search" name="search" id="search" 
-              placeholder="Buscador" className='buscador' autoComplete='off'/>
+       
+        <form    className='form_buscador'>
+           {/* Borro placeholder y lo reeemplazo por un label para poder desplazar esa etiqueta cuando el usuario haga focus. */}
+           
+          <div> 
+           
+              <label  class='label_buscador' id='label_buscador' for="search"> 
+                 <span id='texto_buscador'> Buscador</span>
+                 <input onBlur={handleLabel2} onFocus={handleLabel}  onInput={showIcon} onChange={onChangeSearchProduct} type="search" name="search" id="search" 
+                  autoComplete='off'/>
+               </label>
+          </div>    
             
         </form>
+
         <div className='icono_lupa'>
           <IoMdSearch/> 
         </div>

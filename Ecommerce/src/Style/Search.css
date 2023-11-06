@@ -1,6 +1,8 @@
-.form_buscador{
+/*Comento por ahora*/
+/* .form_buscador{
     border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+
 }
 
 
@@ -9,7 +11,7 @@
     width: 450px;
     height: 80.58px; 
     border: none;
-}
+} */
 
 
 .icono_lupa{
@@ -53,3 +55,58 @@ input[type="search"]::-webkit-search-cancel-button {
   cursor: pointer
 }
 
+/*----------------------------Este es el código para hacer que la palabra buscador suba cuando toco el form --------------------*/
+
+/*Reposo*/
+
+.label_buscador{
+  display: block;
+  width: 400px;
+  height: 75px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 8px 10px;
+  position: relative;
+  box-sizing: border-box;
+  transition: 25s;
+}
+
+span, input{
+  font: 1rem/1rem Montserrat;
+  padding: 0;
+}
+
+label input {
+   display: block;
+   width: 100%;
+   border: none;
+   background: transparent;
+   outline: none;
+}
+
+label span{
+  color: silver;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+/*Focus*/
+
+.label_buscador.focus{
+  border-color: #29aaeb;
+  transition: 0;
+}
+label span.focus {
+  color: #29aaeb;
+}
+
+/*Top*/
+
+label span.top{
+  left: 2px;
+  top: -10px;
+  font-size: 14px;
+  background: white;
+  padding: 0 5px;
+  
+}

@@ -8,8 +8,8 @@
 y uso las propiedades bottom y left para ubicarlo en la parte izquierda del header.*/
 .homeButton{
     position: relative;
-    bottom: 5rem;
-    left: 2.3rem;
+    bottom: 7rem;
+    left: -5rem;
 }
 
 
