@@ -1,5 +1,5 @@
 import '../Style/Search.css'
-import React, { useRef, useEffect, useState } from 'react';
+
 /* Importo un icono de lupa de React icons y lo uso en la línea 16. */
 import {IoMdSearch} from 'react-icons/io';
 import { GiCancel } from 'react-icons/gi';

@@ -11,7 +11,7 @@ import MarcasSponsor  from "./MarcasSponsor.jsx";
 
 import NoMatch from "./noMatch"
 
-function Navbar({products, searchProducts, key}) {
+function Navbar({products, searchProducts, key, setListUpdated}) {
 return (
 <BrowserRouter>
         <nav className="Navbar_nav" aria-multiselectable="true" aria-orientation="horizontal">
@@ -33,7 +33,7 @@ return (
         </nav>
     <Routes>
         <Route path="/" element = { <Home/>}/>
-        <Route path="/Productos" element = {<Products products={products} searchProducts={searchProducts} key={key}/>}/>
+        <Route path="/Productos" element = {<Products products={products} searchProducts={searchProducts} key={key} setListUpdated={setListUpdated}/>}/>
         <Route path="/Ayuda" element = {<Ayuda/>} />
         <Route path="/MarcasSponsor" element = {<MarcasSponsor/>} />
         <Route path="*" element= {<NoMatch/>}/>

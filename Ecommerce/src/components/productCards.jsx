@@ -1,20 +1,25 @@
-import React, { useRef, useEffect } from 'react';
-
+import React, { useRef, useEffect, useState } from 'react';
 
 import "../Style/Products.css"
+import Form from "./formProduct.jsx"
 import Filters from "./filters"
 import Destacados from "../assets/img/destacados.jpg"
-import Ayuda from "../components/Ayuda.jsx";
 import { FaArrowUp } from 'react-icons/fa';
 
 
+function Products ({products, searchProducts, setListUpdated}){
 
 
+    const [product, setProduct] = useState({
+        brand: '',
+        image: '',
+        price: 0,
+        stock: 0,
+        title: '',
+        category: ''
+    })
 
-function Products ({products, searchProducts}){
 /*------------------Este código es para hacer la flecha de volver arriba-------------------*/
-    
-
     //Creo una variable
     const reference_arrow = useRef(null);
 
@@ -26,10 +31,42 @@ function Products ({products, searchProducts}){
         });
     }
 
-    function borrar() {
-        
+    //Eliminar productos
+    const handleDelete = id => {
+        const requestInit = {
+            method: 'DELETE'
+        }
+        fetch('http://localhost:3001/products/' + id, requestInit)
+        .then((res)=> (res.json()))
+        .then((res)=> console.log(res));
+
+        setListUpdated(true)
     }
-    
+
+    //Actualizar productos
+    const handleUpdate = id => {
+        const requestInit = {
+            method: 'PATCH',
+            headers: { "content-type": "application/json" },
+            body:JSON.stringify(product)
+        }
+        fetch('http://localhost:3001/products/' + id, requestInit)
+        .then((res)=> (res.json()))
+        .then((res)=> console.log(res));
+
+        //Reinicia el estado
+        setProduct({
+            brand: '',
+            image: '',
+            price: 0,
+            stock: 0,
+            title: '',
+            category: ''
+        })
+
+        setListUpdated(true)
+    }
+
   //Para hacer que flecha aparezca y desaparezca a partir de un determinado punto.
     useEffect(() => {
         //Guardo la referencia del elemento div que contiene la flecha (línea 95) en la variable flecha
@@ -60,20 +97,25 @@ function Products ({products, searchProducts}){
                 <img src={Destacados} alt="Destacados" />
                 <Filters/>
                 <ul>
-                    {products.filter((productFilter)=> productFilter.tittle.toLocaleLowerCase().includes(searchProducts.toLocaleLowerCase())).map((p)=>(
+                    {products.filter((productFilter)=> productFilter.title.toLocaleLowerCase().includes(searchProducts.toLocaleLowerCase())).map((p)=>(
                     <li key={p.id}>
                         <img 
                             src={p.image} 
-                            alt={p.tittle}
+                            alt={p.title}
                             className="img" />
                         <div>
-                            <strong>{p.tittle}</strong>
+                            <strong>{p.title}</strong>
                         </div>
                         <div>
                             <div>
                                 <h3>${p.price}</h3>
                                 <br />
                                 <button>AGREGAR AL CARRITO</button>
+                                <div className='nm-3'>
+                                    <button onClick={() => handleDelete(p.id)} className='btnDel'>Eliminar</button>
+                                    <button onClick={() => handleUpdate(p.id)} className='btnUp'>Actualizar</button>
+                                </div>
+                                
                             </div>
                         </div>
                     </li>
@@ -84,6 +126,7 @@ function Products ({products, searchProducts}){
                 </ul>
             
             </div>
+            <Form product={product} setProduct={setProduct}/>
 
             {/* Esta es la etiqueta cuyo contenido es la flecha. 
                 El atributo ref me sirve para referenciar al elemento.

@@ -7,6 +7,16 @@ cuando doy click en el logo.
  */
 
 function Header ({onChangeProduct}) {
+
+    const OpenPopup = () =>{
+        let popup = document.getElementById("popup-iniciar-sesion")
+        popup.classList.add("open-popup");
+    }
+    const ClosePopup = ()=>{
+        let popup = document.getElementById("popup-iniciar-sesion")
+        popup.classList.remove("open-popup");
+    }
+
     return(
             <div className='headerContainer'>
                 <div className="logo_img">
@@ -16,7 +26,7 @@ function Header ({onChangeProduct}) {
                     <SearchBar onChangeSearchProduct={onChangeProduct}/>
                 </div>
                 <div className='startSesion'>
-                    <button className="boton_iniciar">INICIAR SESON</button>
+                    <button type='submit'>INICIAR SECION</button>
                 </div>
             </div>
     )

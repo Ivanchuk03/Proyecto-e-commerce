@@ -42,13 +42,14 @@ a la posicion que quiero*/
     justify-content: center;
     border: 1px solid white;
     border-radius: 5px;
+    cursor: pointer;
 }
 .startSesion button{
     font-size: 14px;
     background-color: #29aaeb;
     color: white;
     border: none;
+    cursor: pointer;
 }
-
 
 
